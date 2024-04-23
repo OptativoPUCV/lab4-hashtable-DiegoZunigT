@@ -53,7 +53,10 @@ void enlarge(HashMap * map) {
 
 HashMap * createMap(long capacity) 
 {
-  HashMap *arr = (HashMap *) malloc (sizeof(HashMap) * capacity);
+  HashMap *arr = (HashMap *) malloc (sizeof(HashMap));
+  for(int i = 0; i < capacity; i++) {
+    arr[i].buckets = NULL;
+  }
   return arr;
 }
 

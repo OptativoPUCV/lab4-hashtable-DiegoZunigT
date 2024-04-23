@@ -2,3 +2,20 @@ Tue 23 Apr 2024 04:35:43 PM UTC:
  tests:  0|6
 total_score: 0/70
 4f30017
+Tue 23 Apr 2024 04:42:33 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:5: error: expected ‘,’ or ‘;’ before ‘return’
+   56 |     return arr;
+      |     ^~~~~~
+hashmap.c:55:11: error: unused variable ‘arr’ [-Werror=unused-variable]
+   55 |  HashMap *arr = (HashMap *) malloc (sizeof(HashMap) * capacity)
+      |           ^~~
+hashmap.c:57:1: error: control reaches end of non-void function [-Werror=return-type]
+   57 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+912f94d

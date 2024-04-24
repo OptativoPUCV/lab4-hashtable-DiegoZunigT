@@ -99,7 +99,7 @@ Pair * searchMap(HashMap * map,  char * key)
 Pair * firstMap(HashMap * map) 
 {
   long pos = 0;
-  while(map->buckets[pos] != NULL) {
+  while(map->buckets[pos] == NULL) {
     pos = (pos + 1) % map->capacity;
   }
   map->current = pos;

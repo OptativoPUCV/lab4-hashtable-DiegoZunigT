@@ -277,3 +277,9 @@ hashmap.c:85:26: error: subscripted value is neither array nor pointer nor vecto
       |                          ^
 Compilation failed
 7e19031
+Wed 24 Apr 2024 04:05:57 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 30/70
+b51cb77

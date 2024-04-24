@@ -68,6 +68,7 @@ HashMap * createMap(long capacity)
   }
   map->capacity = capacity;
   map->current = -1;
+  map->size = 0;
   return map;
 }
 
@@ -108,7 +109,7 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) 
 {
   long pos = map->current;
-  while(map->buckets[pos] == NULL) {
+  while(map->buckets[pos] == NULL || map->buckets[pos]->key == NULL) {
     pos = (pos + 1) % map->capacity;
   }
   map->current = pos;

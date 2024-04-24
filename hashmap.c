@@ -99,7 +99,12 @@ Pair * firstMap(HashMap * map)
   return map->buckets[pos];
 }
 
-Pair * nextMap(HashMap * map) {
-
-    return NULL;
+Pair * nextMap(HashMap * map) 
+{
+  long pos = map->current;
+  do {
+    pos = (pos + 1) % map->capacity;
+  } while(map->buckets[pos] == NULL);
+  map->current = pos;
+  return map->buckets[pos];
 }

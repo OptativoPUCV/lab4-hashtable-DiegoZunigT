@@ -97,17 +97,20 @@ Pair * searchMap(HashMap * map,  char * key)
 }
 
 Pair * firstMap(HashMap * map) {
-  long pos = 0;
+  /*long pos = 0;
   while(map->buckets[pos] == NULL) {
     printf("\n%ld\n", pos);
     pos = (pos + 1) % map->capacity;
   }
   map->current = pos;
-  if(pos == 0) {
-    pos = 2;
-  }
   printf("%s\n", map->buckets[pos]->key);
-  return map->buckets[pos];
+  return map->buckets[pos];*/
+  for(long i = 0; i < map->capacity; i++) {
+    if(map->buckets[i] != NULL) {
+      printf("%s\n", map->buckets[i]->key);
+    }
+  }
+  return NULL;
 }
 
 Pair * nextMap(HashMap * map) 

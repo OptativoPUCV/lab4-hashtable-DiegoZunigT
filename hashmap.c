@@ -41,22 +41,31 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) {
   long pos = hash(key, map->capacity);
-  Pair *aux = createPair(key, value);
   if(map->buckets[pos] == NULL || strcmp(map->buckets[pos]->key, "-1")) {
-    //Pair *aux = createPair(key, value);
+    Pair *aux = createPair(key, value);
     map->buckets[pos] = aux;
     map->size += 1;
   } else {
-    for(long i = 0; i < map->capacity; i++) {
-      if(map->buckets[i] == NULL) {
-        //Pair *aux = createPair(key, value);
-        pos = i;
-        break;
-      }
+    for(long i = pos; map->buckets[i] != NULL; i++) {
+      pos = (pos + 1) % map->capacity;
     }
+    Pair *aux = createPair(key, value);
     map->buckets[pos] = aux;
     map->size += 1;
   }
+  /*long pos = hash(key, map->capacity);
+  if(map->buckets[pos] == NULL) {
+    Pair *aux = createPair(key, value);
+    map->buckets[pos] = aux;
+    map->size += 1;
+  } else {
+    while(map->buckets[pos] != NULL) {
+      pos = (pos + 1) % map->capacity;
+    }
+    Pair *aux = createPair(key, value);
+    map->buckets[pos] = aux;
+    map->size += 1;
+  }*/
 }
 
 void enlarge(HashMap * map) {

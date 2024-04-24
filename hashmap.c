@@ -97,13 +97,17 @@ Pair * searchMap(HashMap * map,  char * key)
 }
 
 Pair * firstMap(HashMap * map) {
-    long pos = 0;
-    while(map->buckets[pos] == NULL) {
-      printf("\n%ld\n", pos);
-        pos = (pos + 1) % map->capacity;
-    }
-    map->current = pos;
-    return map->buckets[pos];
+  /*long pos = 0;
+  while(map->buckets[pos] == NULL) {
+    printf("\n%ld\n", pos);
+    pos = (pos + 1) % map->capacity;
+  }
+  map->current = pos;
+  return map->buckets[pos];*/
+  for(long i = 0; map->buckets[i] == NULL; i++) {
+    printf("%ld Dentro del ciclo\n", i);
+  }
+  return NULL;
 }
 
 Pair * nextMap(HashMap * map) 

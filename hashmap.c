@@ -108,15 +108,10 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) 
 {
-  if (map->size == 0 || map->current == -1 || map->capacity == 0) 
-    return NULL;
-  long pos = map->current;
-  if(pos == map->capacity) {
-    return NULL;
-  }
-  
+  long pos = map->current; 
   do {
     pos = (pos + 1) % map->capacity;
+    if(pos == map->capacity);
   } while(map->buckets[pos] == NULL || map->buckets[pos]->key == NULL);
   map->current = pos;
   return map->buckets[pos];

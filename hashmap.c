@@ -44,6 +44,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   if(map->buckets[pos]->key == NULL || strcmp(map->buckets[pos]->key, "-1")) {
     //Pair *aux = (Pair *) malloc (sizeof(Pair));
     Pair *aux = createPair(key, value);
+    map->buckets[pos] = aux;
     //map->buckets[pos] = createPair(key, value);
     //map->size += 1;
   } /*else {

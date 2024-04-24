@@ -105,8 +105,14 @@ Pair * firstMap(HashMap * map) {
   map->current = pos;
   return map->buckets[pos];*/
   long pos = 0;
-  for(long i = 0; map->buckets[i] == NULL; i++) {
-    printf("%ld Dentro del ciclo\n", i);
+  int i = 0;
+  while(1) {
+    printf("\n%ld\n", pos);
+    pos = (pos + 1) % map->capacity;
+    if(i == 10) {
+      break;
+    }
+    i++;
   }
   return map->buckets[pos];
 }

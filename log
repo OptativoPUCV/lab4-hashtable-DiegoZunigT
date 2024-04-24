@@ -566,3 +566,17 @@ Wed 24 Apr 2024 05:18:56 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 023d566
+Wed 24 Apr 2024 05:19:25 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:101:60: error: comparison between pointer and integer [-Werror]
+  101 |   while(map->buckets[pos]->key == NULL || map->buckets[pos == NULL) {
+      |                                                            ^~
+hashmap.c:101:67: error: expected ‘]’ before ‘)’ token
+  101 |   while(map->buckets[pos]->key == NULL || map->buckets[pos == NULL) {
+      |                                                                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+9818ffc

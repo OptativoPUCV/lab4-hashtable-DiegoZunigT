@@ -109,7 +109,7 @@ Pair * firstMap(HashMap * map) {
   while(1) {
     printf("\n%ld\n", pos);
     pos = (pos + 1) % map->capacity;
-    if(map->buckets[pos] != NULL) {
+    if(map->buckets[pos] == NULL) {
       break;
     } else if(i == 10) {
       break;

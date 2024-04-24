@@ -342,3 +342,9 @@ hashmap.c:109:22: error: ‘pos’ may be used uninitialized [-Werror=maybe-unin
 cc1: all warnings being treated as errors
 Compilation failed
 8b37911
+Wed 24 Apr 2024 04:32:59 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|2
+total_score: 50/70
+7d6851b

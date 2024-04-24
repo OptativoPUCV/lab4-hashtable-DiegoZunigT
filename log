@@ -331,3 +331,14 @@ Wed 24 Apr 2024 04:21:01 AM UTC:
  tests:  12|2
 total_score: 50/70
 eb869f2
+Wed 24 Apr 2024 04:32:31 AM UTC: 
+ hashmap.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:109:22: error: ‘pos’ may be used uninitialized [-Werror=maybe-uninitialized]
+  109 |   return map->buckets[pos];
+      |                      ^
+cc1: all warnings being treated as errors
+Compilation failed
+8b37911

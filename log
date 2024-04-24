@@ -133,3 +133,14 @@ Tue 23 Apr 2024 05:29:51 PM UTC:
  tests:  1|5
 total_score: 10/70
 0b2e887
+Wed 24 Apr 2024 12:42:16 AM UTC: 
+ hashmap.c | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   46 |     Pair *aux = createPair(key, value);
+      |           ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+eacacdb

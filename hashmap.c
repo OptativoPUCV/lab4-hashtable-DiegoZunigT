@@ -96,18 +96,13 @@ Pair * searchMap(HashMap * map,  char * key)
   return NULL;
 }
 
-Pair * firstMap(HashMap * map) 
-{ 
-  long pos = 0;
-  if(map->buckets[pos]) {
-    printf("\n\n\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHH\n\n\n");
-  }
-  /*while(!map->buckets[pos]) {
-    pos = (pos + 1) % map->capacity;
-    printf("%ld\n", pos);
-  }*/
-  map->current = pos;
-  return map->buckets[pos];
+Pair * firstMap(HashMap * map) {
+    long pos = 0;
+    while(map->buckets[pos] == NULL) {
+        pos = (pos + 1) % map->capacity;
+    }
+    map->current = pos;
+    return map->buckets[pos];
 }
 
 Pair * nextMap(HashMap * map) 

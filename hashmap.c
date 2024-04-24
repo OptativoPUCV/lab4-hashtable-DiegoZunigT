@@ -47,8 +47,8 @@ void insertMap(HashMap * map, char * key, void * value)
     map->buckets[pos] = aux;
     map->size += 1;*/
   } else {
-    while(map->buckets[pos] != NULL) {
-      pos = pos + 1 % map->capacity;
+    for(long i = pos; map->buckets[i] != NULL; i++) {
+      pos = (pos + 1) % map->capacity;
     }
     /*while(map->buckets[pos] != NULL) {
       pos = (pos + 1) % map->capacity;

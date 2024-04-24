@@ -104,10 +104,11 @@ Pair * firstMap(HashMap * map) {
   }
   map->current = pos;
   return map->buckets[pos];*/
+  long pos = 0;
   for(long i = 0; map->buckets[i] == NULL; i++) {
     printf("%ld Dentro del ciclo\n", i);
   }
-  return NULL;
+  return map->buckets[pos];
 }
 
 Pair * nextMap(HashMap * map) 

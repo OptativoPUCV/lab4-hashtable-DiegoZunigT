@@ -580,3 +580,8 @@ hashmap.c:101:67: error: expected ‘]’ before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 9818ffc
+Wed 24 Apr 2024 05:19:37 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+e9bb256

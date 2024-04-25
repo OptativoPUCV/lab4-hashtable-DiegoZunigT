@@ -824,3 +824,14 @@ Thu 25 Apr 2024 06:17:44 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 9268fd2
+Thu 25 Apr 2024 06:18:05 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:59:10: error: unused variable ‘oldMap’ [-Werror=unused-variable]
+   59 |   Pair **oldMap = map->buckets;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a536ce3

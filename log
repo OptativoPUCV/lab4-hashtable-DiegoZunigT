@@ -701,3 +701,9 @@ hashmap.c:57:10: error: variable ‘oldMap’ set but not used [-Werror=unused-b
 cc1: all warnings being treated as errors
 Compilation failed
 ac9de0d
+Thu 25 Apr 2024 05:58:01 AM UTC: 
+ hashmap.c | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+ tests:  16|1
+total_score: 60/70
+7a732ab

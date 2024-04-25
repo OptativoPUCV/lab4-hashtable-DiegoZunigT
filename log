@@ -762,3 +762,19 @@ Thu 25 Apr 2024 06:05:29 AM UTC:
  tests:  16|1
 total_score: 60/70
 10f4cfe
+Thu 25 Apr 2024 06:06:28 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:66:17: error: passing argument 1 of ‘insertMap’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   66 |       insertMap(newMap, oldMap[i]->key, oldMap[i]->value);
+      |                 ^~~~~~
+      |                 |
+      |                 Pair **
+hashmap.c:42:26: note: expected ‘HashMap *’ {aka ‘struct HashMap *’} but argument is of type ‘Pair **’
+   42 | void insertMap(HashMap * map, char * key, void * value)
+      |                ~~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+09b57d2

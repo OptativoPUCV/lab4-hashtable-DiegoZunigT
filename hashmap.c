@@ -63,7 +63,7 @@ void enlarge(HashMap * map) {
   for(long i = 0; i < map->capacity; i++) {
     if(oldMap[i] != NULL) {
       printf("%s -- %ld\n",(char *) oldMap[i]->value, i);
-      insertMap(map, oldMap[i]->key, oldMap[i]->value);
+      insertMap(newMap, oldMap[i]->key, oldMap[i]->value);
     }
   }
 }

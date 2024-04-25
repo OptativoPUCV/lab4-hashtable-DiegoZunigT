@@ -687,3 +687,17 @@ Thu 25 Apr 2024 05:27:30 AM UTC:
  tests:  16|1
 total_score: 60/70
 20d6f98
+Thu 25 Apr 2024 05:53:13 AM UTC: 
+ hashmap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:60:12: error: unused variable ‘newMap’ [-Werror=unused-variable]
+   60 |   HashMap *newMap = createMap(newCap);
+      |            ^~~~~~
+hashmap.c:57:10: error: variable ‘oldMap’ set but not used [-Werror=unused-but-set-variable]
+   57 |   Pair **oldMap = (Pair **) malloc (sizeof(Pair *) * map->capacity);
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ac9de0d

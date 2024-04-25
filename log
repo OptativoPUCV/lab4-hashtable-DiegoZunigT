@@ -718,3 +718,17 @@ Thu 25 Apr 2024 06:02:35 AM UTC:
  1 file changed, 2 insertions(+), 1 deletion(-)
  tests:  0|0
 6ce2145
+Thu 25 Apr 2024 06:03:06 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:65:16: error: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘void *’ [-Werror=format=]
+   65 |       printf("%s\n", oldMap[i]->value);
+      |               ~^     ~~~~~~~~~~~~~~~~
+      |                |              |
+      |                char *         void *
+      |               %p
+cc1: all warnings being treated as errors
+Compilation failed
+5ee912e

@@ -61,8 +61,7 @@ void enlarge(HashMap * map) {
   Pair **newMap = (Pair **) calloc (newCap, sizeof(Pair *) * newCap);
   map->buckets = newMap;
   map->size = 0;
-  long pos = hash(map->buckets[0]->key, newCap);
-  printf("%s\n",(char *) oldMap[pos]->value);
+  printf("%s\n",(char *) oldMap[0]->value);
   /*for(long i = 0; i < newCap; i++) {
     if(oldMap[i] != NULL) {
       insertMap(map, oldMap[i]->key, oldMap[i]->value);

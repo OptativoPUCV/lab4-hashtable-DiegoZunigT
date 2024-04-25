@@ -61,13 +61,13 @@ void enlarge(HashMap * map) {
   Pair **newMap = (Pair **) calloc (newCap, sizeof(Pair *) * newCap);
   map->buckets = newMap;
   map->size = 0;
-  printf("%s\n",(char *) oldMap[0]->value);
-  /*for(long i = 0; i < newCap; i++) {
+  //printf("%s\n",(char *) oldMap[0]->value);
+  for(long i = 0; i < newCap; i++) {
     if(oldMap[i] != NULL) {
       insertMap(map, oldMap[i]->key, oldMap[i]->value);
       printf("%s -- %ld\n",(char *) oldMap[i]->value, i);
     }
-  }*/
+  }
 }
 
 

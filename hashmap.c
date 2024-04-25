@@ -60,6 +60,7 @@ void enlarge(HashMap * map) {
   long newCap = map->capacity * 2;
   Pair **newMap = (Pair **) calloc (newCap, sizeof(Pair *) * newCap);
   map->buckets = newMap;
+  map->size = 0;
   long pos = hash(map->buckets[0]->key, newCap);
   printf("%s\n",(char *) oldMap[pos]->value);
   /*for(long i = 0; i < newCap; i++) {

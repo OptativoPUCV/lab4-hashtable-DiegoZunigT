@@ -737,3 +737,17 @@ Thu 25 Apr 2024 06:03:56 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 4b4df18
+Thu 25 Apr 2024 06:04:21 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:65:22: error: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘long int’ [-Werror=format=]
+   65 |       printf("%s -- %d\n",(char *) oldMap[i]->value, i);
+      |                     ~^                               ~
+      |                      |                               |
+      |                      int                             long int
+      |                     %ld
+cc1: all warnings being treated as errors
+Compilation failed
+6ec661c

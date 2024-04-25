@@ -111,7 +111,7 @@ Pair * nextMap(HashMap * map)
   long pos = map->current;
   long aux = pos;
   do {
-    if(aux > pos) {
+    if(aux >= pos) {
       return NULL;
     }
     pos = (pos + 1) % map->capacity;

@@ -62,7 +62,7 @@ void enlarge(HashMap * map) {
   map->buckets = newMap;
   for(long i = 0; i < map->capacity; i++) {
     if(oldMap[i] != NULL) {
-      printf("%s\n", oldMap[i]->value);
+      printf("%s\n",(char *) oldMap[i]->value);
       //insertMap(map, oldMap[i]->key, oldMap[i]->value);
     }
   }

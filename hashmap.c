@@ -69,6 +69,7 @@ void enlarge(HashMap * map) {
       printf("%s -- %ld\n",(char *) oldPairs[i]->value, i);
     }
   }
+  printf("\n");
   for(long i = 0; i < newCap; i++) {
     if(map->buckets[i] == NULL) {
       printf("Nulo - %ld\n", i);

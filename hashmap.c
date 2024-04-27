@@ -73,6 +73,9 @@ void enlarge(HashMap * map) {
     if(map->buckets[i] == NULL) {
       printf("Nulo - %ld\n", i);
     }
+    else {
+      printf("%s - %ld\n", (char *) oldPairs[i]->value, i);
+    }
   }
 }
 

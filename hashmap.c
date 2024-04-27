@@ -67,24 +67,6 @@ void enlarge(HashMap * map) {
   }
 }
 
-/*void enlarge(HashMap * map) {
-  if(map == NULL) {
-    return;
-  }
-  enlarge_called = 1; //no borrar (testing purposes)
-  Pair **oldPairs = map->buckets;
-  long oldCap = map->capacity;
-  map->capacity *= 2;
-  Pair **newPairs = (Pair **) calloc (map->capacity, sizeof(Pair *));
-  map->buckets = newPairs;
-  map->size = 0;
-  for(long i = 0; i < oldCap; i++) {
-    if(oldPairs[i] != NULL && oldPairs[i]->key != NULL) {
-      insertMap(map, oldPairs[i]->key, oldPairs[i]->value);
-    }
-  }
-}*/
-
 
 HashMap * createMap(long capacity) 
 {

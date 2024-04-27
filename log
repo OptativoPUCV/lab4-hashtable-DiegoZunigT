@@ -932,3 +932,9 @@ hashmap.c:61:8: error: unused variable ‘newCap’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 8397333
+Sat 27 Apr 2024 03:27:27 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  17|0
+total_score: 70/70
+8e22bc4

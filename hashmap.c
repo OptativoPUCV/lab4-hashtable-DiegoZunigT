@@ -60,7 +60,7 @@ void enlarge(HashMap * map) {
   Pair **oldPairs = map->buckets;
   long newCap = map->capacity;
   map->capacity *= 2;
-  Pair **newPairs = (Pair **) calloc (newCap * 2, sizeof(Pair *) * newCap);
+  Pair **newPairs = (Pair **) calloc (newCap * 2, sizeof(Pair *)/* * newCap*/);
   map->buckets = newPairs;
   map->size = 0;
   for(long i = 0; i < map->capacity; i++) {

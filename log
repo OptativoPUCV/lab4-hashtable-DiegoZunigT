@@ -944,3 +944,14 @@ Sat 27 Apr 2024 03:31:29 AM UTC:
  tests:  16|1
 total_score: 60/70
 ad05b3c
+Sat 27 Apr 2024 03:32:53 AM UTC: 
+ hashmap.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:58:8: error: unused variable ‘oldCap’ [-Werror=unused-variable]
+   58 |   long oldCap = map->capacity;
+      |        ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ebd7088

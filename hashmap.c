@@ -56,20 +56,20 @@ void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   Pair **oldPairs = map->buckets;
   long newCap = map->capacity * 2;
+  map->capacity *= 2;
   Pair **newPairs = (Pair **) calloc (newCap, sizeof(Pair *) * newCap);
   map->buckets = newPairs;
   map->size = 0;
-  printf("%ld\n", newCap);
-  map->size = 0;
+  //printf("%ld\n", newCap);
   
   //printf("%s\n",(char *) oldMap[0]->value);
   for(long i = 0; i < map->capacity; i++) {
     if(oldPairs[i] != NULL || oldPairs[i]->key != NULL) {
       insertMap(map, oldPairs[i]->key, oldPairs[i]->value);
-      printf("%s -- %ld\n",(char *) oldPairs[i]->value, i);
+      //printf("%s -- %ld\n",(char *) oldPairs[i]->value, i);
     }
   }
-  printf("\n");
+  /*printf("\n");
   for(long i = 0; i < newCap; i++) {
     if(map->buckets[i] == NULL) {
       printf("Nulo - %ld\n", i);
@@ -77,7 +77,7 @@ void enlarge(HashMap * map) {
     else {
       printf("%s - %ld\n", (char *) oldPairs[i]->value, i);
     }
-  }
+  }*/
 }
 
 
